@@ -22,6 +22,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     $group_id = intval($_GET['group_id']);
 
+    // Check if the user belongs to the group
+    $checkMembershipQuery = "
+     SELECT 1 
+     FROM group_membership 
+     WHERE user_id = ? AND group_id = ? AND status = 'approved'
+ ";
+    $stmt = $conn->prepare($checkMembershipQuery);
+    $stmt->bind_param("ii", $user_id, $group_id);
+    $stmt->execute();
+    $membershipResult = $stmt->get_result();
+
+    if ($membershipResult->num_rows === 0) {
+        echo json_encode(["status" => "error", "message" => "User does not belong to this group."]);
+        exit();
+    }
+
     // Query to fetch group members details
     $query = "
         SELECT
