@@ -75,8 +75,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Create a poll asking the group members to approve or deny the join request
         $poll_question = "A user wants to join the group. Do you approve?";
         $poll_query = "
-            INSERT INTO polls (group_id, poll_question, option_1, option_2, status)
-            VALUES (?, ?, 'Yes', 'No', 'active')
+            INSERT INTO polls (group_id, poll_question, status)
+            VALUES (?, ?,'active')
         ";
         $stmt = $conn->prepare($poll_query);
         $stmt->bind_param("is", $group_id, $poll_question);
