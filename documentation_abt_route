@@ -1,0 +1,18 @@
+1. http://localhost/cholosave_backend/api/login.php  - login
+2. http://localhost/cholosave_backend/api/register.php  - register
+3. http://localhost/cholosave_backend/api/logout.php  - logout
+4. http://localhost/cholosave_backend/api/enter_group.php  - Enter My enter_group
+5. http://localhost/cholosave_backend/api/create_group.php  - Create enter_group
+6. http://localhost/cholosave_backend/api/get_groups.php  - View Groups
+7. http://localhost/cholosave_backend/api/view_my_groups.php  - View My Groups where  I joined
+8. http://localhost/cholosave_backend/api/join_group.php   - Join a group ( It wil be in view groups then he can request for join)
+9. http://localhost/cholosave_backend/api/member_dashboard.php   - Group member Dashboard
+10. http://localhost/cholosave_backend/api/group_members.php?group_id=1   - Group members list
+11. http://localhost/cholosave_backend/api/memeber_loan_request.php    - Member Request for emergency loan
+12. http://localhost/cholosave_backend/api/view_loan_request.php?group_id=3   - Group_Admin will see the loan requests
+13. http://localhost/cholosave_backend/api/approve_delete_loan_request.php    - Approve or decline loan
+14. http://localhost/cholosave_backend/api/investment_data_input.php    - Group_admin can Input investment Data
+15. http://localhost/cholosave_backend/api/group_join_request.php?group_id=3  - Group Admin will see the lists of people who want to join
+16. http://localhost/cholosave_backend/api/group_join_approve_decline.php   - Group_Admin can 
+17. http://localhost/cholosave_backend/api/contact_us.php  - Admin can see 
+
